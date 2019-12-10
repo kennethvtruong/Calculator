@@ -5,7 +5,7 @@ class Calculator:
         self.operator = operator
     def get_numbers(self):
         self.num1 = (input("What's the first number? "))
-        if not self.num1.isalnum():
+        if not self.num1.isdigit():
             print("That is not a number, idiot, try again")
             my_calc.get_numbers()
             my_calc.choose_operator()
@@ -13,7 +13,7 @@ class Calculator:
         else:
             float(self.num1)
         self.num2 = (input("What's the second number? "))
-        if not self.num2.isalnum():
+        if not self.num2.isdigit():
             print("That is not a number, idiot, try again")
             my_calc.get_numbers()
             my_calc.choose_operator()
@@ -42,13 +42,13 @@ class Calculator:
         if self.operator == "+":
             print(my_calc.addition())
             quit()
-        if self.operator == "-":
+        elif self.operator == "-":
             print(my_calc.subtraction())
             quit()
-        if self.operator == "*":
+        elif self.operator == "*":
             print(my_calc.multiplication())
             quit()
-        if self.operator == "/":
+        elif self.operator == "/":
             print(my_calc.division())
             quit()
         else:
